@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinha Numero</title>
+</head>
+<body>
+    <input type="text" name="" id="adivinha">
+    <br>
+    <br>
+    <button id="tentar">Adivinhar</button>
+
+    <script>
+        var segredo = Math.round(Math.random() * 100);;
+
+        var inputAdivinha = document.querySelector("input");
+        var botao = document.querySelector("button");
+
+        alert(segredo);
+        function onAdivinharClick(){
+            if(inputAdivinha.value == segredo){
+                alert("você acertou");
+            } else {
+                alert("você errou");
+            }
+            inputAdivinha.value = "";
+        }
+
+        botao.onclick = onAdivinharClick;
+    </script>
+</body>
+</html>
